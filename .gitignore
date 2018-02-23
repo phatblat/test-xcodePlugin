@@ -1,0 +1,14 @@
+.DS_Store
+.gradle/
+.project
+.rubygems/
+.settings/
+.vscode
+*.xccheckout
+*.xcscmblueprint
+bin/
+build/
+Carthage/
+gradlew.bat
+Pods/
+xcuserdata
