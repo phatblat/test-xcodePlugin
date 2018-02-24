@@ -6,12 +6,6 @@
  * https://github.com/openbakery/gradle-xcodePlugin
  */
 
-/*
-plugins {
-    id "org.openbakery.xcode-plugin" version "0.15.2"
-}
-*/
-
 buildscript {
     repositories {
         jcenter()
@@ -20,7 +14,12 @@ buildscript {
     //dependencies.classpath "org.openbakery:xcode-plugin:0.15.+"
     dependencies.classpath "org.openbakery:xcode-plugin:0.15.3.develop.+"
 }
+// import org.openbakery.XcodePlugin
 apply plugin: "org.openbakery.xcode-plugin"
+
+// plugins {
+//     id "org.openbakery.xcode-plugin" version "0.15.2"
+// }
 
 task removeBatchFile(type: Delete) { delete 'gradlew.bat' }
 
@@ -33,5 +32,6 @@ wrapper {
 xcodebuild {
     scheme = 'MY-SCHEMA'
     target = 'MY-TARGET'
+    configuration = "Debug"
 }
 
